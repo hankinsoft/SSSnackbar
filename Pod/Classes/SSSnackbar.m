@@ -136,11 +136,17 @@ static SSSnackbar *currentlyVisibleSnackbar = nil;
                          }
                          completion:nil];
     }
-    self.dismissalTimer = [NSTimer scheduledTimerWithTimeInterval:self.duration
-                                                           target:self
-                                                         selector:@selector(timeoutForDismissal:)
-                                                         userInfo:nil
-                                                          repeats:NO];
+
+    // If we don't have a duration, then we won't dismiss automatically.
+    if(0 != fabs(self.duration))
+    {
+        self.dismissalTimer = [NSTimer scheduledTimerWithTimeInterval:self.duration
+                                                               target:self
+                                                             selector:@selector(timeoutForDismissal:)
+                                                             userInfo:nil
+                                                              repeats:NO];
+    } // End of we have a duration specified
+
     currentlyVisibleSnackbar = self;
 }
 
