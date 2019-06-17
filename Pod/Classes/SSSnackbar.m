@@ -250,7 +250,7 @@ static SSSnackbar *currentlyVisibleSnackbar = nil;
     if (!_hiddenVerticalLayoutConstraints) {
         
         _hiddenVerticalLayoutConstraints =
-        [NSLayoutConstraint constraintsWithVisualFormat:@"V:[self(44)]-(-50)-|"
+        [NSLayoutConstraint constraintsWithVisualFormat:@"V:[self(84)]-(-50)-|"
                                                 options:0
                                                 metrics:nil
                                                   views:NSDictionaryOfVariableBindings(self)];
@@ -272,7 +272,7 @@ static SSSnackbar *currentlyVisibleSnackbar = nil;
         }
 
         _visibleVerticalLayoutConstraints =
-        [NSLayoutConstraint constraintsWithVisualFormat:[NSString stringWithFormat:@"V:[self(44)]-(%d)-|", bottomOffset]
+        [NSLayoutConstraint constraintsWithVisualFormat:[NSString stringWithFormat:@"V:[self(84)]-(%d)-|", bottomOffset]
                                                 options:0
                                                 metrics:nil
                                                   views:NSDictionaryOfVariableBindings(self)];
