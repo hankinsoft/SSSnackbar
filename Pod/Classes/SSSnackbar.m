@@ -250,7 +250,7 @@ static SSSnackbar *currentlyVisibleSnackbar = nil;
     if (!_hiddenVerticalLayoutConstraints) {
         
         _hiddenVerticalLayoutConstraints =
-        [NSLayoutConstraint constraintsWithVisualFormat:@"V:[self(84)]-(-50)-|"
+        [NSLayoutConstraint constraintsWithVisualFormat:@"V:[self(44)]-(-50)-|"
                                                 options:0
                                                 metrics:nil
                                                   views:NSDictionaryOfVariableBindings(self)];
@@ -265,14 +265,14 @@ static SSSnackbar *currentlyVisibleSnackbar = nil;
         int bottomOffset = 0;
         if (@available(iOS 11.0, *)) {
             UIWindow *window = UIApplication.sharedApplication.keyWindow;
-            bottomOffset = window.safeAreaInsets.bottom;
+            bottomOffset = window.safeAreaInsets.bottom + 10;
         }
         if (bottomOffset == 0) {
           bottomOffset = 5;
         }
 
         _visibleVerticalLayoutConstraints =
-        [NSLayoutConstraint constraintsWithVisualFormat:[NSString stringWithFormat:@"V:[self(84)]-(%d)-|", bottomOffset]
+        [NSLayoutConstraint constraintsWithVisualFormat:[NSString stringWithFormat:@"V:[self(44)]-(%d)-|", bottomOffset]
                                                 options:0
                                                 metrics:nil
                                                   views:NSDictionaryOfVariableBindings(self)];
