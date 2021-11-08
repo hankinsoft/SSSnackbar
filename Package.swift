@@ -16,7 +16,7 @@ let package = Package(
         .target(
             name: "SSSnackbar",
             dependencies: [],
-            path: "Pod/Classes",
+            path: "Pod/Classes"
         )
     ]
 )
