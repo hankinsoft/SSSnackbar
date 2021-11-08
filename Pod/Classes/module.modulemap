@@ -1,0 +1,5 @@
+module SSSNackbar {
+     umbrella header "Classes/SSSNackbar.h"
+     export *
+     module * { export * }
+ }
