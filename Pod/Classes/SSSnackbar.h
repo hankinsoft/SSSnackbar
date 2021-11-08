@@ -8,6 +8,12 @@
 
 #import <UIKit/UIKit.h>
 
+//! Project version number for SSSnackBar.
+FOUNDATION_EXPORT double SSSnackBar_VersionNumber;
+
+//! Project version string for SSSnackBar.
+FOUNDATION_EXPORT const unsigned char SSSnackBar_VersionString[];
+
 IB_DESIGNABLE
 @interface SSSnackbar : UIView
 /**
